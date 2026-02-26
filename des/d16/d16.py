@@ -1,14 +1,16 @@
 class Funcionario:
+    # Atributos de Classe
+    empresa = 'Yout'
     def __init__(self, nome, setor, cargo):
+        # Atributos de Instancia
         self.nome = nome
         self.setor = setor
         self.cargo = cargo
 
     def apresentacao(self):
-        return f'Olá eu sou {self.nome} e sou {self.cargo} do setor de {self.setor} da empresa HOMEOFF'
+        return f'Olá eu sou {self.nome} e sou {self.cargo} do setor de {self.setor} da empresa {Funcionario.empresa}'
     
-    # def __str__(self):
-    #     return f'Olá eu sou {self.nome} e sou {self.cargo} do setor de {self.setor} da empresa HOMEOFF'
+Funcionario.empresa = 'VASpp'
     
 c1 = Funcionario('Jaki', 'T1', 'Pleno')
 print(c1.apresentacao())
