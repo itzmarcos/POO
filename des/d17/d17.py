@@ -3,8 +3,14 @@ class Produto:
         self.nome = nome
         self.preco = preco
 
-    def __str__(self):
-        return f'Voce comprou um {self.nome}, pelo o valor de R${self.preco:,.2f}'
+    def etiqueta(self):
+        print('-' * 30)
+        print(f'{self.nome}'.center(30))
+        print(f'R${self.preco:,.2f}'.center(30))
+        print('-' * 30)
 
-p1 = Produto('iPhone 15 Pro', 25000)
-print(p1)
+p1 = Produto('iPhone 15 Pro', 5000)
+p1.etiqueta()
+
+p2 = Produto('Notebook Gamer', 11000)
+p2.etiqueta()
