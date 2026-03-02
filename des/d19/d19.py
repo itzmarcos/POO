@@ -12,8 +12,7 @@ class Livro:
             print(f'Pág{self.valor+1} ->', end=' ', flush=True)
             self.valor += 1
         print(f'Voce avançou {self.valor} paginas e agora esta na pagina {self.valor}')
-        while True:
-            if self.valor == quant:
+        while self.valor not in quant:
                 print('Voce atingiu o numero limite de pagina!')
                 break
 l1 = Livro('Batalha do Apocalipse', 5)

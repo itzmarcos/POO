@@ -14,7 +14,8 @@ class Churrasco:
         valor = self.consumo * self.quant
         total_valor = valor * self.preco
         divisao = total_valor / self.quant
-        return f'Analisando o {self.titulo} com {self.quant} convidados.\nCada participante comerá 0.4kg e cada kg custa R${self.preco}\nO custo total será de R${total_valor:,.2f}, Cada pessoa pagará R${divisao} para participar.'
+        total_carne = self.quant * self.consumo
+        return f'Analisando o {self.titulo} com {self.quant} convidados.\nCada participante comerá 0.4kg e cada kg custa R${self.preco}\nRecomendo compra {total_carne:,.3f}kg de carne\nO custo total será de R${total_valor:,.2f}, Cada pessoa pagará R${divisao} para participar.'
         
 
 
