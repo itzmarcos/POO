@@ -2,16 +2,23 @@ class Gamer:
     def __init__(self, nome, nick):
         self.nome = nome
         self.nick = nick
-
-    def favoritos(self, jogo):
-        lista = []
-        lista.append(jogo)
+        self.jogo = []
+        
+    def favoritos(self, jogo):     
+        self.jogo.append(jogo)
 
     def ficha(self):
-        print(f'Jogador {self.nick}')
-        print(f'Nome real: {self.nome}')
-        
-j1 = Gamer('Antonia Luana', 'Peach')
-j1.favoritos('LOL')
+        print('-' * 25)
+        print(f'Jogador: {self.nick}')
+        print(f'Nome Real: {self.nome}')
+        print('-' * 25)
+        for item in sorted(self.jogo):
+            print(item)
+        print('-' * 25)
+
+j1 = Gamer('Luana Cavalaro', 'Qtc')
+j1.favoritos('League of Legends')
 j1.favoritos('Tibia')
+j1.favoritos('World of Warcraft')
+j1.favoritos('Perfect World')
 j1.ficha()
