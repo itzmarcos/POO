@@ -1,7 +1,7 @@
 #
 class Caneta:
     cores = {
-        'Azul': '\033[34m',
+        'Azul': '\033[36m',
         'Vermelho': '\033[31m',
         'Verde': '\033[32m'
     }
@@ -10,7 +10,8 @@ class Caneta:
         self.cor = cor
 
     def destampar(self):
-        pass
+        return self.escrever()
+
 
     def escrever(self, frase):
         palavras = frase.split()
@@ -20,6 +21,9 @@ class Caneta:
 c1 = Caneta('Azul')
 c2 = Caneta('Vermelho')
 c3 = Caneta('Verde')
+
+c1.destampar()
+
 
 c1.escrever('Olá')
 c2.escrever('Mundo')

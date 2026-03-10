@@ -22,4 +22,4 @@ class Livro:
 l1 = Livro('Batalha do Apocalipse', 20)
 l1.avancar(5)
 l1.avancar(4)
-l1.avancar(100)
+l1.avancar(20)
