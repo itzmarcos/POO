@@ -9,14 +9,16 @@ class Caneta:
     def __init__(self, cor):
         self.cor = cor
 
-    def destampar(self):
-        return self.escrever()
-
-
     def escrever(self, frase):
         palavras = frase.split()
         for palavra in palavras:
-            print(f"{Caneta.cores[self.cor]}{palavra}\033[m", end=' ')
+            print(f"{Caneta.cores[self.cor]}{palavra}\033[m", end=' ')  
+
+    def destampar(self):
+        pass
+
+
+    
 
 c1 = Caneta('Azul')
 c2 = Caneta('Vermelho')
