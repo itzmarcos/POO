@@ -16,10 +16,10 @@ class Caneta:
             print(f"{Caneta.cores[self.cor]}{palavra}\033[m", end=' ')  
 
     def destampar(self):
-        if self.escrever == Caneta.cores[0]:
-            self.usar_cor = True
+        if self.escrever != Caneta.cores['Azul']:
+            print('Ativado')
         else:
-            print('Caneta Azul tampada')
+            print('Desativada')
 
 
 
@@ -30,7 +30,7 @@ c1 = Caneta('Azul')
 c2 = Caneta('Vermelho')
 c3 = Caneta('Verde')
 
-c1.destampar()
+
 
 
 c1.escrever('Olá')
