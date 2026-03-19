@@ -1,36 +1,27 @@
 #
 class Caneta:
-    cores = {
-        'Azul': '\033[36m',
-        'Vermelho': '\033[31m',
-        'Verde': '\033[32m'
-    }
-
     def __init__(self, cor):
         self.cor = cor
-        self.usar_cor = True
+        self.cores = {}
+        
+    def destampar(self):
+        if self.cor == 'Azul':
+            return '\033[36m'
+        if self.cor == 'Vermelho':
+            return '\033[31m'
+        if self.cor == 'Verde':
+            return '\033[32m'
 
     def escrever(self, frase):
         palavras = frase.split()
         for palavra in palavras:
-            print(f"{Caneta.cores[self.cor]}{palavra}\033[m", end=' ')  
-
-    def destampar(self):
-        if self.escrever != Caneta.cores['Azul']:
-            print('Ativado')
-        else:
-            print('Desativada')
-
-
-
-
-    
+            print(f"{self.destampar()}{palavra}\033[m", end=' ')  
 
 c1 = Caneta('Azul')
 c2 = Caneta('Vermelho')
 c3 = Caneta('Verde')
 
-
+c1.destampar()
 
 
 c1.escrever('Olá')
