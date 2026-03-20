@@ -5,23 +5,20 @@ class Caneta:
         self.cores = []
         
     def destampar(self):
-            self.cores = [
-            '\033[36m',
-            '\033[31m',
-            '\033[32m',
-            ]
-        
+        self.cores = {
+            'Azul': '\033[36m',
+            'Vermelho': '\033[31m',
+            'Verde': '\033[32m'
+        }  
 
     def escrever(self, frase):
         palavras = frase.split()
         for palavra in palavras:
-            print(f"{palavra}\033[m", end=' ')  
+            print(f"{self.destampar()}{palavra}\033[m", end=' ')
 
 c1 = Caneta('Azul')
 c2 = Caneta('Vermelho')
 c3 = Caneta('Verde')
-
-
 
 
 
